@@ -6,10 +6,10 @@ package Lesson_1;
 
  import java.util.Scanner;
 
-public class sample1 {
+public class sample_2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in, "cp866");
-        System.out.print("Enter name: ");
+        System.out.print("Введите имя: ");
         String name = sc.next();
 
         // .nextLine()   --- Считывает строчку 
@@ -19,7 +19,7 @@ public class sample1 {
         //12 \n 
         // num = 12
         // .... sc.nextLine(); //
-        System.out.printf("HI, %s", name);
+        System.out.printf("Привет, %s", name);
         sc.close();
 
     }

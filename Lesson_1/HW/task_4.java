@@ -1,5 +1,7 @@
 package Lesson_1.HW;
 
+import java.util.Scanner;
+
 public class task_4 {
 
     /*
@@ -8,24 +10,54 @@ public class task_4 {
      * Требуется восстановить выражение до верного равенства. Предложить хотя бы
      * одно решение или сообщить, что его нет.
      */
-
-    static boolean Num(int n) {
-        for (int index = 2; index < n; index++) {
-            if (n % index == 0)
-                return false;
+    static boolean isRightEquation(String q, String w, String e) {
+        int a = Integer.parseInt(q);
+        int b = Integer.parseInt(w);
+        int c = Integer.parseInt(e);
+        if (a + b == c) {
+            return true;
         }
-        return true;
-
+        return false;
     }
 
     public static void main(String[] args) {
-        StringBuilder st = new StringBuilder();
-        st = st.append("1");
-        for (int i = 2; i < 1000; i++) {
-            if (Num(i))
-                st = st.append(", ").append(i);
+        Scanner scn = new Scanner(System.in);
+        System.out.printf("Enter equition as (q + w = e): ");
+        String equation = scn.nextLine();
+        equation = equation.replace(" ", "");
+        String[] numbersArray = equation.split("[+=]");
+        boolean isCorrectInput = true;
+
+        for (String element : numbersArray) {
+            element = element.replace("?", "0");
+            int number = Integer.parseInt(element);
+            if (number < 0) {
+                isCorrectInput = false;
+                break;
+            }
         }
-        System.out.println("This is order of simple numbers from 1 to 1000:");
-        System.out.println(st);
+
+        if (!isCorrectInput || numbersArray.length != 3) {
+            System.out.println("You enter wrong equation!!!");
+        } else {
+            boolean isSolution = false;
+            for (int x = 0; x < 10; x++) {
+                String[] tempArray = numbersArray.clone();
+                for (int i = 0; i < 3; i++) {
+                    String c = Integer.toString(x);
+                    tempArray[i] = tempArray[i].replace("?", c);
+                }
+
+                if (isRightEquation(tempArray[0], tempArray[1], tempArray[2])) {
+                    System.out.printf("%s + %s = %s", tempArray[0], tempArray[1], tempArray[2]);
+                    isSolution = true;
+                    break;
+                }
+            }
+            if (!isSolution) {
+                System.out.println("Solution of equation is absent!!!");
+            }
+        }
+        scn.close();
     }
 }

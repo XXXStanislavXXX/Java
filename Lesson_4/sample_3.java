@@ -1,6 +1,5 @@
 package Lesson_4;
 
-import java.util.LinkedList;
 import java.util.Scanner;
 import java.util.Stack;
 

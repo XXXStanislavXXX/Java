@@ -1,6 +1,5 @@
 package Lesson_4;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Random;

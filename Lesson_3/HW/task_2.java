@@ -3,7 +3,6 @@ package HW;
 import java.util.ArrayList;
 import java.util.Random;
 
-import static java.lang.Math.round;
 import static java.util.Collections.max;
 import static java.util.Collections.min;
 

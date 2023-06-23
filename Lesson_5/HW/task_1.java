@@ -27,10 +27,8 @@ import java.util.Stack;
 public class task_1 {
     static void sortedPrint(Map<String, ArrayList> map) {
 
-        
         Set<String> keySet = map.keySet();
 
-        
         int maxCount = 0;
         int minCount = 1_000_000;
 
@@ -41,7 +39,7 @@ public class task_1 {
                 minCount = item.getValue().size();
 
         }
-        
+
         Stack<String> st = new Stack<>();
         int num = minCount;
         while (num <= maxCount) {
@@ -53,7 +51,7 @@ public class task_1 {
             }
             num += 1;
         }
-        
+
         String name;
         for (int i = 0; i < keySet.size(); i++) {
             name = st.pop();
@@ -67,31 +65,30 @@ public class task_1 {
         System.out.println();
     }
 
-    
     public static void main(String[] args) {
-        
+
         Map<String, ArrayList> abon = new HashMap<>() {
             {
-                put("Иванов", new ArrayList<Integer>() {
+                put("Чернышев", new ArrayList<Integer>() {
                     {
                         add(876787);
                         add(888876);
                         add(922381);
                     }
                 });
-                put("Хрюкин", new ArrayList<Integer>() {
+                put("Стэтхэм", new ArrayList<Integer>() {
                     {
                         add(123123);
                     }
                 });
-                put("Петров", new ArrayList<Integer>() {
+                put("Федоров", new ArrayList<Integer>() {
                     {
                         add(838383);
                         add(232377);
 
                     }
                 });
-                put("Арбузов", new ArrayList<Integer>() {
+                put("Печкин", new ArrayList<Integer>() {
                     {
                         add(886644);
                         add(555222);
@@ -102,29 +99,29 @@ public class task_1 {
             }
         };
         System.out.println();
-        
-        System.out.println("Исходные данные: ");
+
+        System.out.println("Уже есть ");
         sortedPrint(abon);
 
-        try (// Создаем циклическое меню
-        Scanner scan = new Scanner(System.in, "cp866")) {
+        try (
+                Scanner scan = new Scanner(System.in, "cp866")) {
             Boolean getOut = false;
             String st;
             while (!getOut) {
-                System.out.println("Введите номер действия (1 - добавить абонента, 9 - выйти из программы):");
+                System.out.println("Выбирай (1 - добавить абонента, 9 - выйти из программы):");
                 st = scan.nextLine();
                 String name = "";
                 String phString;
                 switch (st) {
                     case "1": {
-                        System.out.println("Введите фамилию абонента:");
+                        System.out.println("давай фамилию ");
                         name = scan.nextLine();
                         if (abon.containsKey(name)) {
-                            System.out.println("Такая фамилия уже есть. Больше фантазии!");
+                            System.out.println("Уже есть, тик - так, думаем ");
                             System.out.println();
                             break;
                         } else {
-                            System.out.println("Введите номера телефонов через запятую: ");
+                            System.out.println("Пиши цифры через зпт ");
                             phString = scan.nextLine();
                             String[] arr = phString.split(", ");
                             ArrayList<Integer> arrInt = new ArrayList<>();
@@ -140,7 +137,7 @@ public class task_1 {
                     case "9": {
                         getOut = true;
                         System.out.println();
-                        System.out.println("Так быстро? Ну, до новых встреч!");
+                        System.out.println("Покеда!");
                         System.out.println();
                         break;
                     }
@@ -148,7 +145,7 @@ public class task_1 {
                 }
             }
         } catch (NumberFormatException e) {
-            // TODO Auto-generated catch block
+
             e.printStackTrace();
         }
     }

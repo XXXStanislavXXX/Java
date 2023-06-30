@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
-  Абстракция животного - пациента ветклиники.
+Абстракция животного - пациента ветклиники.
  */
 public class Animal {
     protected final String CLASS_NAME = "The " + getClass().getSimpleName();

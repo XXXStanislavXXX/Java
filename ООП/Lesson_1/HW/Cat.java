@@ -1,5 +1,7 @@
 package ООП.Lesson_1.HW;
 
+import java.util.Arrays;
+
 public class Cat extends Animal {
     String creature = "cat";
     Boolean run = true;

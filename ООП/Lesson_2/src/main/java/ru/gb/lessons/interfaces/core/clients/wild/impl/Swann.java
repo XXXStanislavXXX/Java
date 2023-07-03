@@ -13,6 +13,11 @@ public class Swann extends WildAnimal implements Flyable, Runnable, Swimable, So
     public Swann() {
     }
 
+    @Override
+    public void getIll() {
+
+    }
+
     public Swann(int id, int numberOfLimbs, LocalDate registrationDate, Owner owner) {
         super();
     }

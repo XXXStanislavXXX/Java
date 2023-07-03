@@ -13,6 +13,11 @@ public class Duck extends WildAnimal implements Flyable, Runnable, Swimable, Sou
     public Duck() {
     }
 
+    @Override
+    public void getIll() {
+
+    }
+
     public Duck(int id, int numberOfLimbs, LocalDate registrationDate, Owner owner) {
         super(id, numberOfLimbs, registrationDate, owner);
     }

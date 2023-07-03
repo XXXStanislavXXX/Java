@@ -137,5 +137,7 @@ public abstract class Animal {
         }
     public String getClassName() {
         return this.CLASS_NAME;
-    }    
+    }
+
+    public abstract void getIll();
 }

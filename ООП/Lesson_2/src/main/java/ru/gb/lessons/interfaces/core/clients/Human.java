@@ -13,4 +13,8 @@ public class Human extends Animal { // todo на семинаре, в учебн
     public String getFullName() {
         return fullName;
     }
+
+    @Override
+    public void getIll() {
+    }
 }

@@ -4,10 +4,12 @@ import java.time.LocalDate;
 
 import ru.gb.lessons.interfaces.core.clients.Flyable;
 import ru.gb.lessons.interfaces.core.clients.Runnable;
+import ru.gb.lessons.interfaces.core.clients.Soundable;
+import ru.gb.lessons.interfaces.core.clients.Swimable;
 import ru.gb.lessons.interfaces.core.clients.owners.Owner;
 import ru.gb.lessons.interfaces.core.clients.wild.WildAnimal;
 
-public class Duck extends WildAnimal implements Flyable, Runnable {
+public class Duck extends WildAnimal implements Flyable, Runnable, Swimable, Soundable {
     public Duck() {
     }
 
@@ -27,4 +29,14 @@ public class Duck extends WildAnimal implements Flyable, Runnable {
         return 3;
     }
 
+    @Override
+    public void sound() {
+        System.out.println(CLASS_NAME + "прокрякала: 5 раз");
+    }
+
+    @Override
+    public int getSwimingSpeed() {
+        System.out.println(CLASS_NAME + "плывет со скоростью 2 узла");
+        return 2;
+    }
 }

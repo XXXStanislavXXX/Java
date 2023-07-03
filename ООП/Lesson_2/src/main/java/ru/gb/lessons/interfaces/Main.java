@@ -3,6 +3,8 @@ package ru.gb.lessons.interfaces;
 import ru.gb.lessons.interfaces.core.clients.Animal;
 import ru.gb.lessons.interfaces.core.clients.home.impl.Cat;
 import ru.gb.lessons.interfaces.core.clients.owners.Owner;
+import ru.gb.lessons.interfaces.core.clients.wild.impl.Duck;
+import ru.gb.lessons.interfaces.core.clients.wild.impl.Swann;
 
 import java.time.LocalDate;
 

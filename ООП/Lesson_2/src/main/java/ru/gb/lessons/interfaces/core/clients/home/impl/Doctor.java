@@ -11,7 +11,6 @@ public class Doctor extends Human {
         super(name);
     }
 
-
     @Override
     public String getName() {
         return super.getName();
@@ -27,7 +26,6 @@ public class Doctor extends Human {
     }
 
     ;
-
 
     public List<Doctor> getDoctors() {
         List<Doctor> doctors = new ArrayList<>();

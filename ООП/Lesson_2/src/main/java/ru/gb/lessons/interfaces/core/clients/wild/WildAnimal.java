@@ -11,13 +11,14 @@ import java.util.Date;
 import java.util.List;
 
 /**
- Абстракция дикого животного
+ * Абстракция дикого животного
  */
 public class WildAnimal extends Animal implements Animals {
     public WildAnimal() {
     }
 
-    private WildAnimal(int id, String name, int numberOfLimbs, LocalDate registrationDate, Owner owner, List<Record> records) {
+    private WildAnimal(int id, String name, int numberOfLimbs, LocalDate registrationDate, Owner owner,
+            List<Record> records) {
         super(id, name, numberOfLimbs, registrationDate, owner);
     }
 
@@ -28,6 +29,12 @@ public class WildAnimal extends Animal implements Animals {
         this.registrationDate = registrationDate;
         this.owner = owner;
         this.records = new ArrayList<>();
+    }
+
+    @Override
+    public void getIll() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getIll'");
     }
 
 }

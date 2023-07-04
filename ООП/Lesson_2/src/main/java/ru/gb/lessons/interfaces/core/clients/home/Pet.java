@@ -16,4 +16,10 @@ public class Pet extends Animal implements Animals {
     public Pet(int id, String name, int numberOfLimbs, LocalDate registrationDate, Owner owner) {
         super(id, name, numberOfLimbs, registrationDate, owner);
     }
+
+    @Override
+    public void getIll() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getIll'");
+    }
 }
